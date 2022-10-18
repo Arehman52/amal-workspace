@@ -1,3 +1,4 @@
+import { SettingRoutingModule } from './settings-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SettingsComponent } from './settings.component';
@@ -8,7 +9,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SettingRoutingModule
   ],
   declarations: [SettingsComponent, ProfileComponent, UsersComponent, BillingComponent, NotificationsComponent]
 })
