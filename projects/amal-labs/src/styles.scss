@@ -1,16 +1,1 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
-
-* {
-  box-sizing: border-box;
-  font-family: 'SF Pro Display';
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-}
-
-body,
-html {
-  padding: 0;
-  margin: 0;
-}
+@import "./../../shared-globals/styles/core.scss";
