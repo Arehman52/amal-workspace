@@ -1,10 +1,143 @@
+@import "./../../../../../shared-globals/styles/variables";
+@import "./../../../../../shared-globals/styles/partials/theme";
+
 .header {
   position: absolute;
   width: 1366px;
   height: 70px;
   left: 0px;
   top: 0px;
-
   background: #ffffff;
   border-bottom: 0.5px solid rgba(201, 204, 207, 0.5);
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $primary-color;
+  width: 60px;
+  height: 70px;
+  background: $primary-color;
+  cursor: pointer;
+}
+// =================================================================
+// =================================================================
+// ==================== CLASS SELECT DROPDOWN
+
+.classSelect:active,
+.classSelect:focus-within {
+  background: rgba(109, 113, 117, 0.16);
+  border: none !important;
+}
+
+:host ::ng-deep span.dropdown-btn span {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-block;
+  text-align: center;
+  color: #202223;
+}
+
+:host ::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-down {
+  display: inline-block;
+  position: relative;
+  top: 6px !important;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #adadad !important;
+  border-left: none !important;
+  border-right: 23px solid #adadad !important;
+}
+
+:host ::ng-deep .multiselect-dropdown .dropdown-btn .dropdown-up {
+  display: inline-block;
+  position: relative;
+  top: 6px !important;
+  width: 0;
+  height: 0;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: 23px solid #adadad !important;
+}
+
+:host ::ng-deep span.dropdown-up {
+  border-image-source: url("./../../../assets/images/chevron-up.svg") !important;
+  border-image-repeat: none !important;
+}
+:host ::ng-deep span.dropdown-down {
+  border-image-source: url("./../../../assets/images/chevron-down.svg") !important;
+  border-image-repeat: none !important;
+}
+:host ::ng-deep .multiselect-dropdown .dropdown-btn {
+  display: inline-block;
+  border: none !important;
+  width: 100%;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.52857143;
+  text-align: left;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 4px;
+}
+
+.classSelect {
+  box-sizing: border-box;
+  position: absolute;
+  width: 284px;
+  height: 40px;
+  left: 92px;
+  top: 15px;
+
+  /* Stroke */
+  border: 0.5px solid #c9cccf;
+  border-radius: 8px;
+}
+// ==================== CLASS SELECT DROPDOWN
+// =================================================================
+// =================================================================
+
+.leftIconsBar {
+  position: absolute;
+  width: 60px;
+  height: calc(100vh - 71px);
+  left: 0;
+  top: 71px;
+  box-shadow: 2px 4px 30px rgb(202 202 202 / 25%);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon:hover,
+.icon:active .icon:focus {
+  background-color: #e4e8fd;
+  border-radius: 9px;
+}
+button {
+  background-color: inherit;
+}
+
+.icon {
+  margin-top: 11px;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sepratorIcon {
+  margin-top: 12px;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -28,9 +28,14 @@
               "projects/amal-labs/src/assets"
             ],
             "styles": [
-              "projects/amal-labs/src/styles.scss"
+              "projects/amal-labs/src/styles.scss",
+              "projects/shared-globals/styles/core.scss"
             ],
-            "scripts": []
+            "scripts": [
+							"./node_modules/jquery/dist/jquery.js",
+							"./node_modules/popper.js/dist/umd/popper.min.js",
+							"./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -96,9 +101,14 @@
               "projects/amal-labs/src/assets"
             ],
             "styles": [
-              "projects/amal-labs/src/styles.scss"
+              "projects/amal-labs/src/styles.scss",
+              "projects/shared-globals/styles/core.scss"
             ],
-            "scripts": []
+            "scripts": [
+							"./node_modules/jquery/dist/jquery.js",
+							"./node_modules/popper.js/dist/umd/popper.min.js",
+							"./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         }
       }
@@ -128,9 +138,14 @@
               "projects/amal-auth/src/assets"
             ],
             "styles": [
+              "projects/shared-globals/styles/core.scss",
               "projects/amal-auth/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+							"./node_modules/jquery/dist/jquery.js",
+							"./node_modules/popper.js/dist/umd/popper.min.js",
+							"./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -196,9 +211,14 @@
               "projects/amal-auth/src/assets"
             ],
             "styles": [
-              "projects/amal-auth/src/styles.scss"
+              "projects/amal-auth/src/styles.scss",
+              "projects/shared-globals/styles/core.scss"
             ],
-            "scripts": []
+            "scripts": [
+							"./node_modules/jquery/dist/jquery.js",
+							"./node_modules/popper.js/dist/umd/popper.min.js",
+							"./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         }
       }

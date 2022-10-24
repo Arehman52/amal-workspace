@@ -14,3 +14,10 @@
   order: 0;
   flex-grow: 0;
 }
+
+
+button:hover, button:focus, button {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
