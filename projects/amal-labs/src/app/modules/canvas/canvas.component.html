@@ -15,7 +15,7 @@
   </div> -->
   <!-- Select -->
 
-  <ng-multiselect-dropdown class="classSelect"
+  <ng-multiselect-dropdown #divs class="classSelect" id="ng-multiselect"
   [placeholder]="'Select Class'"
   [data]="dropdownList"
   [(ngModel)]="selectedItems"
@@ -23,6 +23,12 @@
   (onSelect)="onItemSelect($event)"
   (onSelectAll)="onSelectAll($event)"
 >
+<ng-template #optionsTemplate let-item let-option="option" let-id="id" let-isSelected="isSelected">
+  {{option + '   AddRS??'}}
+</ng-template>
+<ng-template #optionSelectedTemplate optionSelectedTemplate let-option="option"  let-id="id">
+  {{option}}
+</ng-template>
 </ng-multiselect-dropdown>
 
   <!-- <div class="select_box">

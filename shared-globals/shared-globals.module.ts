@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedGlobalsComponent } from './shared-globals/shared-globals.component';
 import { NgMultiSelect9DropDownModule } from 'ng-multiselect-dropdown9';
 
 @NgModule({
@@ -8,7 +7,7 @@ import { NgMultiSelect9DropDownModule } from 'ng-multiselect-dropdown9';
     CommonModule,
     NgMultiSelect9DropDownModule.forRoot()
   ],
-  declarations: [SharedGlobalsComponent],
+  declarations: [],
   exports: [
     NgMultiSelect9DropDownModule
   ]

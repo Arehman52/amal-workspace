@@ -29,7 +29,7 @@
             ],
             "styles": [
               "projects/amal-labs/src/styles.scss",
-              "projects/shared-globals/styles/core.scss"
+              "shared-globals/styles/core.scss"
             ],
             "scripts": [
 							"./node_modules/jquery/dist/jquery.js",
@@ -102,7 +102,7 @@
             ],
             "styles": [
               "projects/amal-labs/src/styles.scss",
-              "projects/shared-globals/styles/core.scss"
+              "shared-globals/styles/core.scss"
             ],
             "scripts": [
 							"./node_modules/jquery/dist/jquery.js",
@@ -138,7 +138,7 @@
               "projects/amal-auth/src/assets"
             ],
             "styles": [
-              "projects/shared-globals/styles/core.scss",
+              "shared-globals/styles/core.scss",
               "projects/amal-auth/src/styles.scss"
             ],
             "scripts": [
@@ -212,7 +212,7 @@
             ],
             "styles": [
               "projects/amal-auth/src/styles.scss",
-              "projects/shared-globals/styles/core.scss"
+              "shared-globals/styles/core.scss"
             ],
             "scripts": [
 							"./node_modules/jquery/dist/jquery.js",
