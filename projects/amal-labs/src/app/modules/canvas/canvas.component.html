@@ -24,35 +24,33 @@
   (click)="onDropdownClick($event)"
   (onSelectAll)="onSelectAll($event)"
 >
-<ng-template #optionsTemplate let-item let-option="option" let-id="id" let-isSelected="isSelected">
-  {{option + '   AddRS??'}}
-</ng-template>
-<ng-template #optionSelectedTemplate optionSelectedTemplate let-option="option"  let-id="id">
-  {{option}}
-</ng-template>
 </ng-multiselect-dropdown>
 
 
-  <!-- <div class="select_box">
-      <select class="form-control classSelect">
-        <option value="null" selected disabled>Select Class</option>
-        <option *ngFor="let method of ['x', 'y', 'z']"  [value]="method">
-          {{ method }}
-        </option>
-      </select> -->
+  <!-- annotations staging -->
+  <span class="stagesContainer">
+    <span class="stage enabledColor">
+      <span class="oval ">AI</span>
+      <span class="line"></span>
+    </span>
+    <span class="stage">
+      <span class="oval">
+        <img src="assets/images/lock.svg" alt="" srcset="">
+      </span>
+      <span class="line"></span>
+    </span>
+    <span class="stage">
+      <span class="oval">
+        <img src="assets/images/lock.svg" alt="" srcset="">
+      </span>
+      <!-- <span class="line"></span> -->
+    </span>
+  </span>
 
-
-
-
-
-
-  <div>
-    <!-- annotations staging -->
-  </div>
   <!-- float right -->
-  <div>
-
-  </div>
+  <span>
+    <button type="button" class="amal-button markCompleteBtn">Mark As Complete</button>
+  </span>
 </div>
 
 
@@ -65,28 +63,28 @@
 
 
 <div class="leftIconsBar">
-  <a class="icon">
+  <button class="icon">
     <img src="assets/images/mover_arrows.svg" alt="testIcon">
-  </a>
-  <a class="icon">
+  </button>
+  <button class="icon">
     <img src="assets/images/vector.svg" alt="testIcon">
-  </a>
-  <a class="icon">
+  </button>
+  <button class="icon">
     <img src="assets/images/circle.svg" alt="testIcon">
-  </a>
-  <a class="icon">
+  </button>
+  <button class="icon">
     <img src="assets/images/ellipse.svg" alt="testIcon">
-  </a>
-  <a class="icon">
+  </button>
+  <button class="icon">
     <img src="assets/images/freehand.svg" alt="testIcon">
-  </a>
-  <a class="icon">
+  </button>
+  <button class="icon">
     <img src="assets/images/flag.svg" alt="testIcon">
-  </a>
+  </button>
 
-  <a class="sepratorIcon">
+  <div class="sepratorIcon">
     <img src="assets/images/toolsSepratorLine.svg" alt="testIcon">
-  </a>
+  </div>
 
 
   <div class="icon">

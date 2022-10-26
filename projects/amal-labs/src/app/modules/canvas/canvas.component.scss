@@ -1,14 +1,9 @@
 @import "projects/amal-labs/src/styles.scss";
 // @import "shared-globals/styles/partials/theme";
 
-$salmon : #F06677;
-$purple : #500C6B;
-$skyBlue : #5570F1;
-$pink : #C56CE8;
-
 .header {
   position: absolute;
-  width: 1366px;
+  width: 100vw;
   height: 70px;
   left: 0px;
   top: 0px;
@@ -26,9 +21,77 @@ $pink : #C56CE8;
   background: $primary-color;
   cursor: pointer;
 }
+
+.markCompleteBtn {
+  position: absolute;
+  top: 12px;
+  right: 4%;
+}
+
+.stagesContainer {
+  position: absolute;
+  top: 14px;
+  right: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // background-color: rgb(65, 14, 14);
+  padding: 2px;
+  // border: 1px solid grey;
+  // border-radius: 3px;
+  height: 32px;
+  width: 400px;
+}
+
+.stage {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-right: 2px;
+}
+
+.oval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  background: #6D7175;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  // border: 1px solid blue;
+  border-radius: 50%;
+}
+.stage.enabledColor .oval, .stage.enabledColor .line {
+  background-color: #5570f1 !important;
+}
+.oval img {
+  position: relative;
+  top: 5px;
+  width: 28px;
+  height: 28px;
+}
+
+.line {
+  background: #6D7175;
+  position: absolute;
+  top: 13px;
+  left: 27px;
+  width: 106px;
+  height: 4px;
+}
+
 // =================================================================
 // =================================================================
 // ==================== CLASS SELECT DROPDOWN
+
+#ng-multiselect {
+  display: inline-block;
+}
 
 .classSelect:active,
 .classSelect:focus-within {
@@ -73,7 +136,7 @@ $pink : #C56CE8;
   border-image-source: url("./../../../assets/images/chevron-up.svg") !important;
   border-image-repeat: none !important;
 }
-:host ::ng-deep .dropdown-list .filter-textbox input{
+:host ::ng-deep .dropdown-list .filter-textbox input {
   background-image: url("./../../../assets/images/search-dropdown.svg") !important;
   background-repeat: no-repeat !important;
 }
@@ -91,19 +154,19 @@ $pink : #C56CE8;
   margin-right: 37px !important;
   top: 10px;
 }
-:host ::ng-deep .selectedColor {
-  display: inline-block;
-  width: 17px !important;
-  position: absolute;
-  content: "";
-  left: 16px;
-  height: 17px !important;
-  background-color: yellow !important;
-  opacity: 0.2;
-  border-radius: 3px;
-  margin-right: 37px !important;
-  top: 10px;
-}
+// :host ::ng-deep .selectedColor {
+//   display: inline-block;
+//   width: 17px !important;
+//   position: absolute;
+//   content: "";
+//   left: 16px;
+//   height: 17px !important;
+//   background-color: yellow !important;
+//   opacity: 0.2;
+//   border-radius: 3px;
+//   margin-right: 37px !important;
+//   top: 10px;
+// }
 :host ::ng-deep span.selected-item.salmon::before {
   display: inline-block;
   width: 17px !important;
@@ -123,7 +186,7 @@ $pink : #C56CE8;
   content: "";
   left: 16px;
   height: 17px !important;
-  background-color: $purple;
+  background-color: $primary-purple;
   border-radius: 3px;
   margin-right: 37px !important;
   top: 10px;
@@ -155,7 +218,8 @@ $pink : #C56CE8;
 :host ::ng-deep .dropdown-btn .selected-item a {
   display: none !important;
 }
-:host ::ng-deep .multiselect-dropdown .dropdown-btn .selected-item, .multiselect-dropdown .dropdown-btn .selected-item:hover {
+:host ::ng-deep .multiselect-dropdown .dropdown-btn .selected-item,
+.multiselect-dropdown .dropdown-btn .selected-item:hover {
   padding: 3px !important;
   box-shadow: none !important;
   background: transparent !important;
@@ -189,28 +253,30 @@ $pink : #C56CE8;
 :host ::ng-deep li.multiselect-item-checkbox div::before,
 li.multiselect-item-checkbox:focus-within div::before,
 li.multiselect-item-checkbox div.salmon::before,
-li.multiselect-item-checkbox:focus-within div.salmon::before
- {
+li.multiselect-item-checkbox:focus-within div.salmon::before {
   background-color: $salmon !important;
   border-color: transparent !important;
   border-radius: 4px;
   z-index: 200;
 }
-:host ::ng-deep li.multiselect-item-checkbox div.purple::before, li.multiselect-item-checkbox:focus-within div.purple::before {
-  background-color: $purple !important;
+:host ::ng-deep li.multiselect-item-checkbox div.purple::before,
+li.multiselect-item-checkbox:focus-within div.purple::before {
+  background-color: $primary-purple !important;
   border-color: transparent !important;
   color: transparent !important;
   border-radius: 4px;
   z-index: 200;
 }
-:host ::ng-deep li.multiselect-item-checkbox div.skyBlue::before, li.multiselect-item-checkbox:focus-within div.skyBlue::before {
+:host ::ng-deep li.multiselect-item-checkbox div.skyBlue::before,
+li.multiselect-item-checkbox:focus-within div.skyBlue::before {
   background-color: $skyBlue !important;
   border-color: transparent !important;
   color: transparent !important;
   z-index: 200;
   border-radius: 4px;
 }
-:host ::ng-deep li.multiselect-item-checkbox div.pink::before, li.multiselect-item-checkbox:focus-within div.pink::before {
+:host ::ng-deep li.multiselect-item-checkbox div.pink::before,
+li.multiselect-item-checkbox:focus-within div.pink::before {
   background-color: $pink !important;
   border-color: transparent !important;
   color: transparent !important;
@@ -261,9 +327,14 @@ li.multiselect-item-checkbox:focus-within div.salmon::before
   align-items: center;
 }
 
-.icon:hover,
-.icon:active .icon:focus {
+.icon:hover {
+  cursor: pointer;
   background-color: #e4e8fd;
+  border-radius: 9px;
+}
+.icon:active {
+  cursor: pointer;
+  background-color: #c5cfff;
   border-radius: 9px;
 }
 button {

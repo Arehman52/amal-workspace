@@ -1,13 +1,41 @@
+
+$primary-purple : #500C6B;
+$buttons-purple : #722ed1;
+$salmon : #F06677;
+// $purple : #500C6B;
+$skyBlue : #5570F1;
+$pink : #C56CE8;
+
+
+
 .amal-add-button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: inline-block;
+  cursor: pointer;
+  // flex-direction: row;
+  // align-items: center;
   padding: 10px 20px;
   gap: 7px;
   color: #fff;
   width: 154px;
   height: 40px;
-  background: #722ed1;
+  background: $buttons-purple;
+  border-radius: 4px;
+  border-color: inherit;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.amal-button {
+  display: inline-block;
+  cursor: pointer;
+  // flex-direction: row;
+  // align-items: center;
+  padding: 10px 20px;
+  gap: 7px;
+  color: #fff;
+  width: 180px;
+  height: 40px;
+  background: $buttons-purple;
   border-radius: 4px;
   border-color: inherit;
   flex: none;
