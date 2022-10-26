@@ -1,6 +1,11 @@
 @import "projects/amal-labs/src/styles.scss";
 // @import "shared-globals/styles/partials/theme";
 
+$salmon : #F06677;
+$purple : #500C6B;
+$skyBlue : #5570F1;
+$pink : #C56CE8;
+
 .header {
   position: absolute;
   width: 1366px;
@@ -27,7 +32,7 @@
 
 .classSelect:active,
 .classSelect:focus-within {
-  background: rgba(109, 113, 117, 0.16);
+  background: rgba(110, 109, 117, 0.16);
   border: none !important;
 }
 
@@ -72,26 +77,77 @@
   background-image: url("./../../../assets/images/search-dropdown.svg") !important;
   background-repeat: no-repeat !important;
 }
-
 :host ::ng-deep span.selected-item::before {
-  // display: inline-block;
-  // width: 17px !important;
-  // content: "";
-  // height: 17px !important;
-  // background-color: red;
-  // border-radius: 3px;
-
-
-
-
-
+  // after selecting a class, the class is not persisting in the dom.
   display: inline-block;
   width: 17px !important;
   position: absolute;
   content: "";
   left: 16px;
   height: 17px !important;
-  background-color: red;
+  background-color: grey !important;
+  opacity: 0.2;
+  border-radius: 3px;
+  margin-right: 37px !important;
+  top: 10px;
+}
+:host ::ng-deep .selectedColor {
+  display: inline-block;
+  width: 17px !important;
+  position: absolute;
+  content: "";
+  left: 16px;
+  height: 17px !important;
+  background-color: yellow !important;
+  opacity: 0.2;
+  border-radius: 3px;
+  margin-right: 37px !important;
+  top: 10px;
+}
+:host ::ng-deep span.selected-item.salmon::before {
+  display: inline-block;
+  width: 17px !important;
+  position: absolute;
+  content: "";
+  left: 16px;
+  height: 17px !important;
+  background-color: $salmon;
+  border-radius: 3px;
+  margin-right: 37px !important;
+  top: 10px;
+}
+:host ::ng-deep span.selected-item.purple::before {
+  display: inline-block;
+  width: 17px !important;
+  position: absolute;
+  content: "";
+  left: 16px;
+  height: 17px !important;
+  background-color: $purple;
+  border-radius: 3px;
+  margin-right: 37px !important;
+  top: 10px;
+}
+:host ::ng-deep span.selected-item.pink::before {
+  display: inline-block;
+  width: 17px !important;
+  position: absolute;
+  content: "";
+  left: 16px;
+  height: 17px !important;
+  background-color: $pink;
+  border-radius: 3px;
+  margin-right: 37px !important;
+  top: 10px;
+}
+:host ::ng-deep span.selected-item.skyBlue::before {
+  display: inline-block;
+  width: 17px !important;
+  position: absolute;
+  content: "";
+  left: 16px;
+  height: 17px !important;
+  background-color: $skyBlue;
   border-radius: 3px;
   margin-right: 37px !important;
   top: 10px;
@@ -108,19 +164,11 @@
   color: black !important;
   font-size: 14px;
   font-weight: 400;
-
-
-
-
-
-
   border: 1px solid #337ab7;
-  /* margin-right: 4px; */
   background: #337ab7;
   padding: 0 5px;
   color: #fff;
   margin-left: 25px !important;
-  /* padding-left: 5px !important; */
   border-radius: 2px;
 }
 :host ::ng-deep .dropdown-list .filter-textbox {
@@ -136,15 +184,38 @@
   border-radius: 8px;
   padding: 6px 14px !important;
 }
-:host ::ng-deep li.multiselect-item-checkbox div::before, li.multiselect-item-checkbox:focus-within div::before {
-  background-color: #fa9e57 !important;
+
+//by default salmon color will be assigned if no color is defined in CSS for a
+:host ::ng-deep li.multiselect-item-checkbox div::before,
+li.multiselect-item-checkbox:focus-within div::before,
+li.multiselect-item-checkbox div.salmon::before,
+li.multiselect-item-checkbox:focus-within div.salmon::before
+ {
+  background-color: $salmon !important;
   border-color: transparent !important;
   border-radius: 4px;
-  accent-color: blue !important;
+  z-index: 200;
 }
-
-:ng-deep div[innerText="Mumbai"] {
-  color: red;
+:host ::ng-deep li.multiselect-item-checkbox div.purple::before, li.multiselect-item-checkbox:focus-within div.purple::before {
+  background-color: $purple !important;
+  border-color: transparent !important;
+  color: transparent !important;
+  border-radius: 4px;
+  z-index: 200;
+}
+:host ::ng-deep li.multiselect-item-checkbox div.skyBlue::before, li.multiselect-item-checkbox:focus-within div.skyBlue::before {
+  background-color: $skyBlue !important;
+  border-color: transparent !important;
+  color: transparent !important;
+  z-index: 200;
+  border-radius: 4px;
+}
+:host ::ng-deep li.multiselect-item-checkbox div.pink::before, li.multiselect-item-checkbox:focus-within div.pink::before {
+  background-color: $pink !important;
+  border-color: transparent !important;
+  color: transparent !important;
+  z-index: 200;
+  border-radius: 4px;
 }
 :host ::ng-deep .multiselect-dropdown .dropdown-btn {
   display: inline-block;
@@ -173,19 +244,6 @@
   border: 0.5px solid #c9cccf;
   border-radius: 8px;
 }
-
-input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  background-color: #fa9e57 !important;
-  accent-color: blue !important;
-}
-
-input[type="checkbox"]:checked {
-  accent-color: red !important;
-  background-color: #fa9e57 !important;
-}
-
 // ==================== CLASS SELECT DROPDOWN
 // =================================================================
 // =================================================================
