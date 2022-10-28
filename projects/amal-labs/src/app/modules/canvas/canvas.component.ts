@@ -1,3 +1,5 @@
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { AddEditAnnotationsComponent } from './add-edit-annotations/add-edit-annotations.component';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown9';
 import * as jquery from 'jquery';
@@ -16,7 +18,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
 	// @ContentChildren(MultiSelectComponent) divs!: QueryList<any> ;
   // @ViewChildren('divs') divs!:QueryList<HTMLDivElement>;
   // @ViewChild('divs') divs!:QueryList<ElementRef>;
-  constructor() {
+  constructor(private modalService: NgbModal) {
     // this.selectedItems = [
     //   // { id: 3, text: 'Margins', colorClass: 'skyBlue', isDisabled: false },
     // ];
@@ -87,7 +89,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
         return;
       }
     });
-    this.selectedItems = [{id: item?.id, text: item?.text, colorClass: classExtracted ?? 'salmon', isDisabled: false}];
+    this.selectedItems = [{id: item?.id, text: item?.text, colorClass: classExtracted , isDisabled: false}];
     console.log(item);
     console.log(classExtracted);
     span.classList.add(classExtracted);
@@ -97,5 +99,23 @@ export class CanvasComponent implements OnInit, AfterViewInit {
   }
   onSelectAll(items: any) {
     console.log(items);
+  }
+
+  openModal(){
+
+    let obj: NgbModalOptions;
+		const modRef = this.modalService.open(AddEditAnnotationsComponent,
+      {
+        centered: true,
+        backdrop: 'static',
+        keyboard: false,
+        // size: 'lg',
+        windowClass: 'w70'
+      });
+      modRef.componentInstance.signals.subscribe((ev: any) => {
+        if (ev && ev.hasOwnProperty('type') && ev.type === 'CLOSE') {
+          window.location.reload();
+        }
+      });
   }
 }

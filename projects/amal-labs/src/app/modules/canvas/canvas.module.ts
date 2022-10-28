@@ -1,3 +1,4 @@
+import { AddEditAnnotationsComponent } from './add-edit-annotations/add-edit-annotations.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CanvasComponent } from './canvas.component';
@@ -9,6 +10,6 @@ import { SharedGlobalsModule } from 'shared-globals/shared-globals.module';
   imports: [
     CommonModule, CanvasRoutingModule, SharedGlobalsModule, FormsModule
   ],
-  declarations: [CanvasComponent]
+  declarations: [CanvasComponent, AddEditAnnotationsComponent]
 })
 export class CanvasModule { }
