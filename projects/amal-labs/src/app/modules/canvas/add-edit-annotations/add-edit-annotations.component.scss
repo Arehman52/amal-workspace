@@ -1,0 +1,43 @@
+.modalHeader i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 200;
+}
+.modalHeader i:hover {
+  background-color: rgba(114, 46, 209, 0.07);
+  border-radius: 50%;
+}
+::ng-deep .modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-clip: padding-box;
+  border-radius: 14px 14px 0px 0px !important;
+  outline: 0;
+}
+.modalHeader {
+  background-color: #F6F6F7;
+  border-radius: 14px 14px 0px 0px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  width: 100%;
+  height: 61px;
+  font-style:   normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32px;
+}

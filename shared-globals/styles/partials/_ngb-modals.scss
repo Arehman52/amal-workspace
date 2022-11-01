@@ -11,3 +11,15 @@
   max-width: 70%;
   width: 70%;
 }
+::ng-deep .w60 .modal-dialog {
+  max-width: 60%;
+  width: 60%;
+}
+::ng-deep .w50 .modal-dialog {
+  max-width: 50%;
+  width: 50%;
+}
+::ng-deep .add-annotation-modal-width .modal-dialog {
+  max-width: 460px;
+  width: 460px;
+}

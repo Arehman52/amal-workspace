@@ -110,7 +110,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
         backdrop: 'static',
         keyboard: false,
         // size: 'lg',
-        windowClass: 'w70'
+        windowClass: 'add-annotation-modal-width'
       });
       modRef.componentInstance.signals.subscribe((ev: any) => {
         if (ev && ev.hasOwnProperty('type') && ev.type === 'CLOSE') {

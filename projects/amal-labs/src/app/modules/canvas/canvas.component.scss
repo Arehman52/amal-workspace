@@ -57,7 +57,7 @@
   font-style: normal;
   font-weight: 400;
   background: #6D7175;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 12px;
   color: #fff;
   // border: 1px solid blue;
@@ -330,12 +330,12 @@ li.multiselect-item-checkbox:focus-within div.pink::before {
 
 .icon:hover {
   cursor: pointer;
-  background-color: #e4e8fd;
+  background-color: rgba(221, 221, 221, 0.5);
   border-radius: 9px;
 }
 .icon:active {
   cursor: pointer;
-  background-color: #c5cfff;
+  background-color: rgba(221, 221, 221, 0.7);
   border-radius: 9px;
 }
 button {

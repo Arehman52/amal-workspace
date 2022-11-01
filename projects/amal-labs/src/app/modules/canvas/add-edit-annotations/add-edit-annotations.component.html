@@ -1,3 +1,101 @@
-<p>
-  add-edit-annotations works!
-</p>
+<div class="">
+  <div class="modalHeader">
+    Add Annotation
+    <i class="fa fa-times" aria-hidden="true" (click)="onClose()"></i>
+  </div>
+  <div class="modalBody p-3">
+    <form [formGroup]="createAnnotationForm" (ngSubmit)="SaveAnnotation()" class="p-4">
+      <div class="form-group row required-star">
+        <label class="col-12 px-0 col-form-label">
+          Shape
+        </label>
+
+        <div class="col-12 pl-0">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <img src="assets/images/circle.svg" alt="" srcset="">
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Shape" readonly aria-label="Shape"
+            [ngClass]="{ 'is-invalid': isControlValid('shape') }" aria-describedby="basic-addon1">
+          </div>
+
+          <!-- <div *ngIf="isControlValid('paymentMethod')" class="invalid-feedback">
+            <i class="fa fa-info-circle fa-errorIcon" aria-hidden="true" tooltip="Payment Method is required">
+            </i>
+          </div> -->
+        </div>
+      </div>
+      <div class="form-group row required-star">
+        <label class="col-12 px-0 col-form-label">
+          Name
+        </label>
+
+        <div class="col-12 pl-0">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="name" placeholder="Name" aria-label="Name"
+            [ngClass]="{ 'is-invalid': isControlValid('name') }" aria-describedby="basic-addon1">
+          </div>
+
+          <!-- <div *ngIf="isControlValid('name')" class="invalid-feedback">
+            <i class="fa fa-info-circle fa-errorIcon" aria-hidden="true" tooltip="Name is required">
+            </i>
+          </div> -->
+        </div>
+      </div>
+      <div class="form-group row required-star">
+        <label class="col-12 px-0 col-form-label">
+          Class
+        </label>
+
+        <div class="col-12 pl-0">
+          <select #ref (change)="onChangeAnnotationClass(ref.value)" class="form-control" formControlName="class"
+            [ngClass]="{ 'is-invalid': isControlValid('class') }">
+            <option [ngValue]="null" selected disabled>Select Class</option>
+            <option *ngFor="let annoClass of annoClasses" [value]="annoClass.name">
+              {{ annoClass.name }}
+            </option>
+          </select>
+
+          <!-- <div *ngIf="isControlValid('class')" class="invalid-feedback">
+            <i class="fa fa-info-circle fa-errorIcon" aria-hidden="true" tooltip="Class is required">
+            </i>
+          </div> -->
+        </div>
+      </div>
+      <div class="form-group row required-star">
+        <label class="col-12 px-0 col-form-label">
+          Annotation Description
+        </label>
+
+        <div class="col-12 pl-0">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="description" placeholder="Description"
+            [ngClass]="{ 'is-invalid': isControlValid('description') }" aria-label="Description" aria-describedby="basic-addon1">
+          </div>
+
+          <!-- <div *ngIf="isControlValid('description')" class="invalid-feedback">
+            <i class="fa fa-info-circle fa-errorIcon" aria-hidden="true" tooltip="description is required">
+            </i>
+          </div> -->
+        </div>
+      </div>
+
+    </form>
+
+
+
+
+
+    <div class="bodyFooter float-right p-3">
+      <button class="btn btn-info mr-2" (click)="onClose()">
+        Close
+      </button>
+      <button class="btn btn-info" type="submit" (click)="SaveAnnotation()">
+        Save
+      </button>
+
+    </div>
+  </div>
+</div>

@@ -246,9 +246,9 @@ wow-auto-complete {
   ~ .invalid-feedback {
     display: block !important;
 
-    > .fa-errorIcon {
-      margin-top: -48px !important;
-    }
+    // > .fa-errorIcon {
+    //   margin-top: -48px !important;
+    // }
   }
 }
 
@@ -275,3 +275,14 @@ div.cdk-overlay-container {
   border-radius: 4px;
   padding: 1px;
 }
+
+::ng-deep.form-group {
+  margin-bottom: 0 !important;
+}
+
+
+
+// .form-group.required-star label::after{
+//   content:"*";
+//   color: maroon;
+// }

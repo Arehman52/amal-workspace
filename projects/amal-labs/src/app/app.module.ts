@@ -13,8 +13,6 @@ import { ApiService } from './shared/services/api.service';
   ],
   imports: [
     BrowserModule,
-    NgbModule,
-    NgbModalModule,
     AppRoutingModule,
     SharedGlobalsModule
   ],
