@@ -318,22 +318,37 @@ li.multiselect-item-checkbox:focus-within div.pink::before {
 .leftIconsBar {
   position: absolute;
   width: 60px;
-  height: calc(100vh - 71px);
+  height: calc(100vh - 70px);
   left: 0;
-  top: 71px;
+  top: 70px;
   box-shadow: 2px 4px 30px rgb(202 202 202 / 25%);
-  background: #fff;
+  // background: #fff;
+  // background: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.canvasContent {
+  position: absolute;
+  // width: 60px;
+  z-index: 200;
+  width: calc(100vw - 60px);
+  height: calc(100vh - 70px);
+  left: 60px;
+  top: 70px;
+  box-shadow: 2px 4px 30px rgb(202 202 202 / 25%);
+  background:  rgba(90, 129, 93, 0.095);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.icon:hover {
+.icon:not(.sepratorIcon):hover {
   cursor: pointer;
   background-color: rgba(221, 221, 221, 0.5);
   border-radius: 9px;
 }
-.icon:active {
+.icon:not(.sepratorIcon):active {
   cursor: pointer;
   background-color: rgba(221, 221, 221, 0.7);
   border-radius: 9px;
@@ -350,11 +365,9 @@ button {
   align-items: center;
   justify-content: center;
 }
-.sepratorIcon {
-  margin-top: 12px;
-  height: 36px;
-  width: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .sepratorIcon:active {
+//   background-color: transparent !important;
+// }
+// .sepratorIcon:hover {
+//   background-color: transparent !important;
+// }
